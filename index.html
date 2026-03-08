@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hugs & Chocolates Celebration</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <p class="eyebrow">Spread tiny moments of joy</p>
+        <h1>Hugs & Chocolates Confetti</h1>
+        <p class="subtitle">
+          Tap a button and launch a burst of emoji confetti. Built for feel-good vibes on every click.
+        </p>
+      </header>
+
+      <section class="controls" aria-label="Celebration controls">
+        <button class="celebrate-btn hug-btn" data-kind="hug" aria-label="Send hugs">
+          🤗 Send Hugs
+        </button>
+        <button class="celebrate-btn chocolate-btn" data-kind="choc" aria-label="Send chocolates">
+          🍫 Send Chocolates
+        </button>
+      </section>
+
+      <section class="status-grid">
+        <article class="status-card">
+          <h2>Total Bursts</h2>
+          <p id="totalBursts" class="stat-number">0</p>
+        </article>
+        <article class="status-card">
+          <h2>Hug Bursts</h2>
+          <p id="hugBursts" class="stat-number">0</p>
+        </article>
+        <article class="status-card">
+          <h2>Chocolate Bursts</h2>
+          <p id="chocBursts" class="stat-number">0</p>
+        </article>
+      </section>
+
+      <section class="activity-log" aria-live="polite">
+        <div class="log-header">
+          <h2>Activity Feed</h2>
+          <button id="clearFeed" class="clear-btn">Clear</button>
+        </div>
+        <ul id="feedList"></ul>
+      </section>
+    </main>
+
+    <div id="confettiLayer" class="confetti-layer" aria-hidden="true"></div>
+
+    <template id="feedTemplate">
+      <li class="feed-item"></li>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
